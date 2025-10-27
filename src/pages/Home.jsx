@@ -7,7 +7,7 @@ const Home = () => {
     <div className="home-container text-center text-white fade-up">
       <div className="home-card shadow-lg p-5 rounded-4 bg-dark bg-opacity-75">
         <h1 className="mb-3 fw-bold">
-          Welcome to <span className="text-info">MyUserDetails</span>
+          Welcome to <span className="text-info">MyProfile</span>
         </h1>
         <p className="text-light mb-4">
           Check your profile details.
