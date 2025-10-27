@@ -20,7 +20,7 @@ const Header = () => {
         style={{ letterSpacing: "1px", cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
-        MyUserProfile
+        MyProfile
       </h2>
 
       <nav>
