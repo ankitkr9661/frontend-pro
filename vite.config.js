@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    allowedHosts: ['frontend-pro-1.onrender.com'], // ✅ Add your host here
+    allowedHosts: ['frontend-pro-2.onrender.com'], // ✅ Add your host here
     port: process.env.PORT || 5173,
   },
 })
