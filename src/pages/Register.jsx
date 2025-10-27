@@ -17,8 +17,12 @@ const Register = () => {
     e.preventDefault();
     setMessage("");
 
+    // ✅ Dynamic base URL (works for local + Render)
+    const API_BASE_URL =
+      import.meta.env.VITE_API_URL || "http://localhost:5000";
+
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", form);
+      const res = await axios.post(`${API_BASE_URL}/api/users/register`, form);
       if (res.data.message) {
         setMessage("✅ User registered successfully!");
         setTimeout(() => navigate("/login"), 2000);

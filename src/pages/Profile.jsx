@@ -15,9 +15,13 @@ const Profile = () => {
       return;
     }
 
+    // ✅ Dynamic API Base URL (works for local + Render)
+    const API_BASE_URL =
+      import.meta.env.VITE_API_URL || "http://localhost:5000";
+
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users/profile", {
+        const res = await axios.get(`${API_BASE_URL}/api/users/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data.user);
