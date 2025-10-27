@@ -7,10 +7,10 @@ const Home = () => {
     <div className="home-container text-center text-white fade-up">
       <div className="home-card shadow-lg p-5 rounded-4 bg-dark bg-opacity-75">
         <h1 className="mb-3 fw-bold">
-          Welcome to <span className="text-info">MyStream</span>
+          Welcome to <span className="text-info">MyUserDetails</span>
         </h1>
         <p className="text-light mb-4">
-          Stream and enjoy entertainment anytime, anywhere.
+          Check your profile details.
         </p>
         <div className="d-flex justify-content-center gap-3">
           <Link to="/login" className="btn btn-info text-white px-4">

@@ -20,7 +20,7 @@ const Header = () => {
         style={{ letterSpacing: "1px", cursor: "pointer" }}
         onClick={() => navigate("/")}
       >
-        MyStream
+        MyUserProfile
       </h2>
 
       <nav>

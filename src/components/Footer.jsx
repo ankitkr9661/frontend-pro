@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer text-center py-3 mt-auto">
       <p className="mb-0">
-        © {new Date().getFullYear()} MyStream | Designed with ❤️ by Ankit
+        © {new Date().getFullYear()} MyUserProfile | Designed with ❤️ by Ankit
       </p>
     </footer>
   );
