@@ -22,7 +22,7 @@ const Register = () => {
     const API_BASE_URL =
       import.meta.env.VITE_API_URL ||
       import.meta.env.VITE_LOCAL_API_URL ||
-      "http://localhost:5000"; // final fallback
+      "http://localhost:10000"; // final fallback
 
     try {
       const res = await axios.post(`${API_BASE_URL}/api/users/register`, form);
