@@ -13,9 +13,11 @@ const Login = () => {
     e.preventDefault();
     setMessage("");
 
-    // ✅ Dynamic API base URL (local + Render support)
+    // ✅ Choose API automatically (Render or Local)
     const API_BASE_URL =
-      import.meta.env.VITE_API_URL || "http://localhost:5000";
+      import.meta.env.VITE_API_URL ||
+      import.meta.env.VITE_LOCAL_API_URL ||
+      "http://localhost:5000";
 
     try {
       const res = await axios.post(`${API_BASE_URL}/api/users/login`, {
@@ -25,6 +27,7 @@ const Login = () => {
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
+
       setMessage("✅ Login successful!");
       setTimeout(() => navigate("/profile"), 1000);
     } catch (err) {
@@ -64,7 +67,10 @@ const Login = () => {
             />
           </div>
 
-          <button className="btn btn-accent w-100 mt-3 fw-semibold" type="submit">
+          <button
+            className="btn btn-accent w-100 mt-3 fw-semibold"
+            type="submit"
+          >
             Login
           </button>
         </form>

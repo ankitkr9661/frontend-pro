@@ -15,9 +15,11 @@ const Profile = () => {
       return;
     }
 
-    // ✅ Dynamic API Base URL (works for local + Render)
+    // ✅ Use environment-based API URL (local + Render)
     const API_BASE_URL =
-      import.meta.env.VITE_API_URL || "http://localhost:5000";
+      import.meta.env.VITE_API_URL ||
+      import.meta.env.VITE_LOCAL_API_URL ||
+      "http://localhost:5000";
 
     const fetchProfile = async () => {
       try {

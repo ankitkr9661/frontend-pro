@@ -1,3 +1,4 @@
+// 📁 src/pages/Register.jsx
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -17,9 +18,11 @@ const Register = () => {
     e.preventDefault();
     setMessage("");
 
-    // ✅ Dynamic base URL (works for local + Render)
+    // ✅ Use environment variables for dynamic base URL
     const API_BASE_URL =
-      import.meta.env.VITE_API_URL || "http://localhost:5000";
+      import.meta.env.VITE_API_URL ||
+      import.meta.env.VITE_LOCAL_API_URL ||
+      "http://localhost:5000"; // final fallback
 
     try {
       const res = await axios.post(`${API_BASE_URL}/api/users/register`, form);
